@@ -2,6 +2,8 @@
 
 First implementation of the Pons fee receiver and permanent liquidity vault. **Not deployed or independently audited.** There is no replacement ERC-20 here: the project token must be created through Pons.
 
+`NVDA_TOKEN` is the existing tokenized NVIDIA asset used as the Pons pairing token. It is distinct from NVDA lite. The new NVDA lite address is recorded as `PROJECT_TOKEN_ADDRESS` only after the Pons launch transaction succeeds.
+
 ## What is implemented
 
 - `LiquidityFeeReceiver` is configured as Pons's `creatorFeeRecipient`. It claims its own quote-token escrow balance and reserves half of actual receipts for liquidity, with the other half accrued to a fixed project treasury. Cumulative rounding prevents tiny repeated claims changing the allocation.
