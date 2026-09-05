@@ -1,4 +1,6 @@
 // SPDX-License-Identifier: MIT
+// Website: https://nvdalite.credit/
+// X: https://x.com/nvdalite
 pragma solidity ^0.8.26;
 
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
